@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <center><h1>tictactoe</h1></center>
+    </head>
+    <body>
+        <center><table border="1" >
+            <tr>
+                <td onclick="f(id)" id = "1" style="width: 100px;height: 100px;">
+                   
+                </td>
+                <td onclick="f(id)" id = "2" style="width: 100px;height: 100px;">
+                    
+                </td>
+                <td onclick="f(id)" id = "3" style="width: 100px;height: 100px;">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td onclick="f(id)" id = "4" style="width: 100px;height: 100px;">
+
+                </td>
+                <td onclick="f(id)" id = "5" style="width: 100px;height: 100px;">
+                    
+                </td>
+                <td onclick="f(id)" id = "6" style="width: 100px;height: 100px;">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td onclick="f(id)" id = "7" style="width: 100px;height: 100px;">
+
+                </td>
+                <td onclick="f(id)" id = "8" style="width: 100px;height: 100px;">
+                    
+                </td>
+                <td onclick="f(id)" id = "9" style="width: 100px;height: 100px;">
+                    
+                </td>
+            </tr>
+        </table></center>
+        <table>
+                <tr>
+                    <td>player1:</td>
+        <td id="a" >
+                <img src="circle.png" style="width:70px;height:70px" alt="x">
+        </td>
+    </tr>
+    <tr>
+        <td >
+               player2:</td><td id="b"><img  src="x.png" style="width:70px;height:70px" alt="o">
+                </td>
+                </tr>
+    </table>
+    </body>
+    <script>
+        var a=2;
+      function f(id)
+      {
+          if(document.getElementById(id).innerHTML!=document.getElementById("a").innerHTML&&document.getElementById(id).innerHTML!=document.getElementById("b").innerHTML)
+          {
+          if(a==2)
+          {
+          document.getElementById(id).innerHTML=document.getElementById("a").innerHTML;
+          a=1;
+          }
+          else
+          {
+          document.getElementById(id).innerHTML=document.getElementById("b").innerHTML;
+          a=2;
+          }
+        }
+        for(var i=1;i<=9&&(document.getElementById(i).innerHTML==document.getElementById("a").innerHTML||document.getElementById(i).innerHTML==document.getElementById("b").innerHTML);i++)
+        {
+            if(i==9)
+            document.location.reload();
+        }
+        if(document.getElementById("1").innerHTML==document.getElementById("a").innerHTML||document.getElementById("1").innerHTML==document.getElementById("b").innerHTML)   
+        {
+            if(document.getElementById("1").innerHTML==document.getElementById("2").innerHTML&&document.getElementById("1").innerHTML==document.getElementById("3").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+            if(document.getElementById("1").innerHTML==document.getElementById("4").innerHTML&&document.getElementById("1").innerHTML==document.getElementById("7").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+            if(document.getElementById("1").innerHTML==document.getElementById("5").innerHTML&&document.getElementById("1").innerHTML==document.getElementById("9").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+        }
+        if(document.getElementById("3").innerHTML==document.getElementById("a").innerHTML||document.getElementById("3").innerHTML==document.getElementById("b").innerHTML)   
+        {
+            if(document.getElementById("3").innerHTML==document.getElementById("5").innerHTML&&document.getElementById("3").innerHTML==document.getElementById("7").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+            if(document.getElementById("3").innerHTML==document.getElementById("6").innerHTML&&document.getElementById("3").innerHTML==document.getElementById("9").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+        }
+        if(document.getElementById("2").innerHTML==document.getElementById("a").innerHTML||document.getElementById("2").innerHTML==document.getElementById("b").innerHTML)   
+        {
+            if(document.getElementById("2").innerHTML==document.getElementById("5").innerHTML&&document.getElementById("2").innerHTML==document.getElementById("8").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+        }
+        if(document.getElementById("7").innerHTML==document.getElementById("a").innerHTML||document.getElementById("7").innerHTML==document.getElementById("b").innerHTML)   
+        {
+            if(document.getElementById("7").innerHTML==document.getElementById("8").innerHTML&&document.getElementById("7").innerHTML==document.getElementById("9").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+        }
+        if(document.getElementById("4").innerHTML==document.getElementById("a").innerHTML||document.getElementById("4").innerHTML==document.getElementById("b").innerHTML)   
+        {
+            if(document.getElementById("4").innerHTML==document.getElementById("5").innerHTML&&document.getElementById("4").innerHTML==document.getElementById("6").innerHTML)
+            {
+                alert("player "+a+" won");
+             document.location.reload();
+        }
+        }
+    }   
+    </script>
+</html>

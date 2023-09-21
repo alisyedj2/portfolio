@@ -1,0 +1,40 @@
+body{
+    background-image: url("profbg.jpg");
+
+}
+.info{
+    display: flex;
+    width : 70%;
+    margin-left: -20px;
+    margin-right: -20px;;
+    background-image: url("bg.jpg");
+    justify-content: center;
+    background-size : cover;
+    border-radius: 20%;
+    box-shadow: 20px 20px 20px ;
+}
+#pic{
+    border-radius: 50%;
+    width: 50%;
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    margin-left:  0%;
+}
+li{
+    padding-left : 20px;
+    font-size: larger; 
+}
+a:hover{
+    color: aliceblue;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: black;
+}
+.contact{
+    color : rgb(27, 161, 218);
+}
